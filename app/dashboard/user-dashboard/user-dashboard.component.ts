@@ -148,10 +148,8 @@ public meetingTimer:any;
   
     this.dashService.getAllMeetings().subscribe(
       data=>{
-        if(data.status===404){
-          this.router.navigate(['/404']);
-        }
-        else if(data.status===500){
+       
+       if(data.status===500){
           this.router.navigate(['/500']);
         }
         else{
